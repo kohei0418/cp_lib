@@ -24,9 +24,9 @@
 
 using namespace std;
 
-#define FOR(k,a,b) for(typeof(a) k=(a); k < (b); k++)
-#define FORE(k,a,b) for(typeof(a) k=(a); k <= (b); k++)
-#define REP(k,a) for(int k=0; k < (a); k++)
+#define FOR(k,a,b) for(typeof(a) k = (a); k < (b); k++)
+#define FORE(k,a,b) for(typeof(a) k = (a); k <= (b); k++)
+#define REP(k,a) for(typeof(a) k = 0; k < (a); k++)
 
 #define SZ size()
 #define ALL(c) (c).begin(), (c).end()
