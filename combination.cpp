@@ -4,35 +4,32 @@ using namespace std;
 
 template <typename T>
 struct CombTable {
-    T **table;
-    int size;
-    T mod;
-    CombTable(int size_, T mod_ = -1) {
-        size = size_ + 1;
-        mod = mod_;
-        table = new T*[size];
-        for(int i = 0; i < size; i++) 
-            table[i] = new T[size];
-        for(int i = 1; i < size; i++) {
+    int size_;
+    vector<vector<T>> table_;
+    T mod_;
+
+    CombTable(int size, T mod = -1) {
+        size_ = size + 1;
+        mod_ = mod;
+        table_.resize(size_);
+        for(int i = 0; i < size_; i++) 
+            table_[i].resize(size_);
+        for(int i = 1; i < size_; i++) {
             for(int j = 0; j <= i; j++) {
-                if(j == 0) table[i][j] = 1;
-                else if(j == 1) table[i][j] = i;
-                else if(i == j) table[i][j] = 1;
-                else table[i][j] = 0;
+                if(j == 0) table_[i][j] = 1;
+                else if(j == 1) table_[i][j] = i;
+                else if(i == j) table_[i][j] = 1;
+                else table_[i][j] = 0;
             }
         }
     }
-    ~CombTable() {
-        for(int i = 0; i < size; i++) delete[] table[i];
-        delete[] table;
-    }
-
+    
     T get(int n, int m) {
-        if(table[n][m] > 0) return table[n][m];
+        if(table_[n][m] > 0) return table_[n][m];
         else {
-            table[n][m] = get(n-1, m) + get(n-1, m-1);
-            if(mod > 0) return table[n][m] %= mod;
-            else return table[n][m];
+            table_[n][m] = get(n-1, m) + get(n-1, m-1);
+            if(mod_ > 0) return table_[n][m] %= mod_;
+            else return table_[n][m];
         }
     }
 };
