@@ -1,25 +1,24 @@
 # cp_lib
 
-競技プログラミング用のライブラリ．
+Library for Competitive Programming
 
-以下の内容を含む(予定)
-
-* 行列・ベクトル計算
-  + 和と積
-  + 逆行列
-* データ構造
+* Matrix and Vector
+  + Sum and Product
+  + Inversion
+  + Determinant
+* Data structure
   + Union-Find
   + RMQ
-  + 二分探索木
-* グラフ
-  + 最短経路
-  + 連結成分
-  + 最小全域木
-  + 最大流
-  + 最小費用流
-* 文字列
-  + BM法
-* 数理
-  + 組み合わせ
-  + 単体法
-  + ユークリッドの互除法
+  + Bit
+* Graph
+  + Shortest path
+  + Connected component analysis
+  + Minimam spanning tree
+  + Maxflow
+  + Min cost flow
+* String
+  + BM
+* Math
+  + Combination
+  + Simplex
+  + Euclidean algorithm
