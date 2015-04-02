@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -24,16 +25,13 @@
 
 using namespace std;
 
-#define FOR(k,a,b) for(typeof(a) k = (a); k < (b); k++)
-#define FORE(k,a,b) for(typeof(a) k = (a); k <= (b); k++)
-#define REP(k,a) for(typeof(a) k = 0; k < (a); k++)
+#define FOR(k,a,b) for(int k=(a); k < (b); k++)
+#define FORE(k,a,b) for(int k=(a); k <= (b); k++)
+#define REP(k,a) for(int k=0; k < (a); k++)
 
-#define SZ size()
 #define ALL(c) (c).begin(), (c).end()
-#define PB push_back
-#define MP make_pair
-#define EACH(i,c) for(typeof((c).begin()) i=(c).begin(); i!=(c).end(); i++)
 #define EXIST(s,e) ((s).find(e)!=(s).end())
+#define RANGE(lb, x, ub) ((lb) <= (x) && (x) < (ub))
 
 #define dump(x) cerr << #x << ": " << (x) << endl;
 
@@ -47,10 +45,8 @@ const int INF = 1000 * 1000 * 1000;
 const double EPS = 1e-10;
 
 
-
 int main()
 {
-  
-  
-  return 0;
+
+    return 0;
 }
